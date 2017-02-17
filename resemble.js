@@ -484,6 +484,21 @@ var _this = {};
 			var self = {
 				ignoreNothing: function(){
 
+					tolerance.red = 0;
+					tolerance.green = 0;
+					tolerance.blue = 0;
+					tolerance.alpha = 0;
+					tolerance.minBrightness = 0;
+					tolerance.maxBrightness = 255;
+
+					ignoreAntialiasing = false;
+					ignoreColors = false;
+
+					if(hasMethod) { param(); }
+					return self;
+				},
+				ignoreLess: function(){
+
 					tolerance.red = 16;
 					tolerance.green = 16;
 					tolerance.blue = 16;
